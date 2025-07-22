@@ -75,7 +75,7 @@ const Share = () => {
       content: {
         title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
         description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
-        imageUrl: KAKAOTALK_SHARE_IMAGE,
+        imageUrl: "../assets/KakaotalkAlarmPhoto.jpg",
         link: {
           mobileWebUrl: WEDDING_INVITATION_URL,
           webUrl: WEDDING_INVITATION_URL,
