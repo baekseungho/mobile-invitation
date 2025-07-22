@@ -5,7 +5,7 @@ import Flower from "../assets/flower2.png";
 
 const Wrapper = styled.div`
     padding-top: 42px;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 `;
 
