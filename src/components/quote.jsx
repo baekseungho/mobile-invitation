@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const Content = styled.span`
     display: block;
     margin: 0 auto;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "mom_to_daughter";
     text-align: center;
     color: var(--title-color);
@@ -39,11 +39,11 @@ const Quote = () => {
         <Wrapper>
             <Image src={Flower} data-aos="fade-up" />
             <Content data-aos="fade-up">
-                사랑은 오래 참고, 사랑은 온유하며, 시기하지 아니하며, 자랑하지 아니하며,
+                사랑은 오래 참고, 사랑은 온유하며, 시기하지 아니하며,
                 <br />
-                교만하지 아니하며... 모든 것을 참으며, 모든 것을 믿으며,
+                자랑하지 아니하며, 교만하지 아니하며, 모든 것을 참으며,
                 <br />
-                모든 것을 바라며, 모든 것을 견디느니라.
+                모든 것을 믿으며, 모든 것을 바라며, 모든 것을 견디느니라.
                 <br />
                 그런즉 믿음, 소망, 사랑 이 세 가지는 항상 있을 것인데
                 <br />
