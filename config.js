@@ -1,7 +1,8 @@
 export const WEDDING_INVITATION_URL =
   "https://mobile-invitation-pi.vercel.app/";
 export const KAKAOTALK_API_TOKEN = "JavaScript 키 입력";
-export const KAKAOTALK_SHARE_IMAGE = "https://i.imgur.com/jd685ME.jpeg";
+export const KAKAOTALK_SHARE_IMAGE =
+  "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg";
 
 export const WEDDING_DATE = "2025년 12월 27일, 토요일 오후 16시 00분";
 export const WEDDING_LOCATION = "에스가든웨딩";
