@@ -24,11 +24,10 @@ const Wrapper = styled.div`
     background: #efebe9;
     background-image: url(${GroovePaper});
     width: 100%;
-    padding-top: 20px;
 `;
 
 const AudioButton = styled.button`
-    margin: 0 auto;
+    margin: 16px auto;
     display: block;
     background: #6d4c41;
     color: white;
@@ -61,18 +60,20 @@ const IndexPage = () => {
         AOS.init({ duration: 1500 });
     }, []);
 
-    // 접속 방식 확인 (referrer가 없으면 QR 가능성 높음)
+    // 접속 환경 확인 및 오디오 재생 로직
     useEffect(() => {
-        const isFromKakao = document.referrer.includes("kakao");
-        if (!isFromKakao && document.referrer === "") {
-            // QR 가능성 → 버튼 노출
-            setShowPlayButton(true);
-        } else {
-            // 일반 접속 → 자동 재생
+        const isKakaoInAppBrowser = navigator.userAgent
+            .toLowerCase()
+            .includes("kakaotalk");
+
+        if (isKakaoInAppBrowser) {
+            // 카카오톡 인앱 브라우저는 자동 재생 시도
             audioRef.current?.play().catch(() => {
-                // 자동재생 실패 시 사용자 재생 유도
                 setShowPlayButton(true);
             });
+        } else {
+            // QR 등 외부 접속은 버튼 필요
+            setShowPlayButton(true);
         }
     }, []);
 
@@ -84,12 +85,12 @@ const IndexPage = () => {
 
     return (
         <Wrapper>
-            {/* 오디오 요소 */}
+            {/* 오디오 */}
             <audio ref={audioRef} loop>
                 <source src={Song} />
             </audio>
 
-            {/* QR 접속일 경우에만 노출 */}
+            {/* QR 접속 시 재생 버튼 */}
             {showPlayButton && !isPlaying && (
                 <AudioButton onClick={handlePlayMusic}>
                     🎵 음악 재생하기
@@ -103,6 +104,7 @@ const IndexPage = () => {
             <Quote />
             <CongratulatoryMoney />
             <Share />
+
             <Footer
                 style={{
                     background: "#D7CCC8",
