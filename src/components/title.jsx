@@ -9,7 +9,7 @@ import {
 import HeadPhoto from "../assets/HeadPhoto.webp"; // 이미지 경로 수정
 
 const Layout = styled.div`
-    width: 70%;
+    width: 90%;
     overflow: hidden;
     margin: 0 auto;
 `;
