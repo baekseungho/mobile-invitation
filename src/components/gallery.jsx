@@ -53,16 +53,10 @@ const Title = styled.p`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr); // 항상 3개씩
+    gap: 8px; // 조금 더 좁은 간격
 
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-    }
+    /* 모바일에서도 3열 유지하므로 반응형 제외 */
 `;
 
 const GridImage = styled.img`
