@@ -3,21 +3,21 @@ import styled from "styled-components";
 import { Divider } from "antd";
 
 // 이미지 import
-import Photo1 from "../assets/Photo1.jpg";
-import Photo2 from "../assets/Photo2.jpg";
-import Photo3 from "../assets/Photo3.jpg";
-import Photo4 from "../assets/Photo4.jpg";
-import Photo5 from "../assets/Photo5.jpg";
-import Photo6 from "../assets/Photo6.jpg";
-import Photo7 from "../assets/Photo7.jpg";
-import Photo8 from "../assets/Photo8.jpg";
-import Photo9 from "../assets/Photo9.jpg";
-import Photo10 from "../assets/Photo10.jpg";
-import Photo11 from "../assets/Photo11.jpg";
-import Photo12 from "../assets/Photo12.jpg";
-import Photo13 from "../assets/Photo13.jpg";
-import Photo14 from "../assets/Photo14.jpg";
-import Photo15 from "../assets/Photo15.jpg";
+import Photo1 from "../assets/Photo1.webp";
+import Photo2 from "../assets/Photo2.webp";
+import Photo3 from "../assets/Photo3.webp";
+import Photo4 from "../assets/Photo4.webp";
+import Photo5 from "../assets/Photo5.webp";
+import Photo6 from "../assets/Photo6.webp";
+import Photo7 from "../assets/Photo7.webp";
+import Photo8 from "../assets/Photo8.webp";
+import Photo9 from "../assets/Photo9.webp";
+import Photo10 from "../assets/Photo10.webp";
+import Photo11 from "../assets/Photo11.webp";
+import Photo12 from "../assets/Photo12.webp";
+import Photo13 from "../assets/Photo13.webp";
+import Photo14 from "../assets/Photo14.webp";
+import Photo15 from "../assets/Photo15.webp";
 
 // 배열로 묶기
 const photoList = [
