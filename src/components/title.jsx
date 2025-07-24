@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
     WEDDING_DATE,
+    WEDDING_DATE2,
     WEDDING_LOCATION,
     GROOM_NAME,
     BRIDE_NAME,
@@ -61,6 +62,8 @@ const Title = () => {
                 </GroomBride>
                 <Schedule>
                     {WEDDING_DATE}
+                    <br />
+                    {WEDDING_DATE2}
                     <br />
                     {WEDDING_LOCATION}
                 </Schedule>

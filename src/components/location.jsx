@@ -33,6 +33,18 @@ const Content = styled.p`
     padding-top: 42px;
     padding-bottom: 42px;
     margin: 0;
+
+    .bus-line,
+    .bus-stop {
+        display: inline;
+    }
+
+    @media (max-width: 500px) {
+        .bus-line,
+        .bus-stop {
+            display: block;
+        }
+    }
 `;
 
 const Map = styled.div`
@@ -63,7 +75,11 @@ const Location = () => {
             let c = window.location.protocol === "https:" ? "https:" : "http:";
             let a = "16137cec";
 
-            if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) {
+            if (
+                window.daum &&
+                window.daum.roughmap &&
+                window.daum.roughmap.cdn
+            ) {
                 return;
             }
             window.daum = window.daum || {};
@@ -72,7 +88,11 @@ const Location = () => {
                 URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
                 url_protocal: c,
             };
-            let b = c + "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" + a + "/roughmapLander.js";
+            let b =
+                c +
+                "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
+                a +
+                "/roughmapLander.js";
 
             // document.write -> doumnet.body.append로 수정
             const scriptTag = document.createElement("script");
@@ -107,7 +127,12 @@ const Location = () => {
                 <Title>버스 이용시</Title>
                 <br />
                 <br />
-                101, 103, 105, 107, 116, 119, 312 대전교통공사 앞 하차 (도보 10분)
+                <span className="bus-line">
+                    101, 103, 105, 107, 116, 119, 312
+                </span>
+                <span className="bus-stop">
+                    대전교통공사 앞 하차 (도보 10분)
+                </span>
                 <br />
                 213, 월평자동차전시장 앞 하차 (도보 5분)
                 <br />
