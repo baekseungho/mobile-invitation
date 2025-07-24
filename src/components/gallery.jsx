@@ -18,6 +18,12 @@ import Photo12 from "../assets/Photo12.webp";
 import Photo13 from "../assets/Photo13.webp";
 import Photo14 from "../assets/Photo14.webp";
 import Photo15 from "../assets/Photo15.webp";
+import Photo16 from "../assets/Photo16.webp";
+import Photo17 from "../assets/Photo17.webp";
+import Photo18 from "../assets/Photo18.webp";
+import Photo19 from "../assets/Photo19.webp";
+import Photo20 from "../assets/Photo20.webp";
+import Photo21 from "../assets/Photo21.webp";
 
 // 배열로 묶기
 const photoList = [
@@ -36,6 +42,12 @@ const photoList = [
     Photo13,
     Photo14,
     Photo15,
+    Photo16,
+    Photo17,
+    Photo18,
+    Photo19,
+    Photo20,
+    Photo21,
 ];
 const Wrapper = styled.div`
     padding: 42px 0;
@@ -53,7 +65,7 @@ const Title = styled.p`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // 항상 3개씩
+    grid-template-columns: repeat(4, 1fr); // 항상 3개씩
     gap: 8px; // 조금 더 좁은 간격
 
     /* 모바일에서도 3열 유지하므로 반응형 제외 */
@@ -151,6 +163,7 @@ const Gallery = () => {
                         key={index}
                         src={photo}
                         alt={`photo-${index + 1}`}
+                        loading="lazy"
                         onClick={() => openModal(index)}
                     />
                 ))}
