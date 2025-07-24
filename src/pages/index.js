@@ -24,10 +24,11 @@ const Wrapper = styled.div`
     background: #efebe9;
     background-image: url(${GroovePaper});
     width: 100%;
+    padding-top: 20px;
 `;
 
 const AudioButton = styled.button`
-    margin: 16px auto;
+    margin: 0 auto;
     display: block;
     background: #6d4c41;
     color: white;
