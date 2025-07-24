@@ -65,7 +65,7 @@ const Title = styled.p`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr); // 항상 3개씩
+    grid-template-columns: repeat(3, 1fr); // 항상 3개씩
     gap: 8px; // 조금 더 좁은 간격
 
     /* 모바일에서도 3열 유지하므로 반응형 제외 */
@@ -73,11 +73,66 @@ const Grid = styled.div`
 
 const GridImage = styled.img`
     width: 100%;
-    height: auto;
-    cursor: zoom-in;
-    border-radius: 8px;
+    height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    cursor: zoom-in;
+    border-radius: 6px;
+    transition: transform 0.2s;
+
+    /* 기본값 (2000px 초과 시) */
+    height: 820px;
+
+    @media (max-width: 2000px) {
+        height: 770px;
+    }
+    @media (max-width: 1900px) {
+        height: 740px;
+    }
+    @media (max-width: 1800px) {
+        height: 710px;
+    }
+    @media (max-width: 1700px) {
+        height: 680px;
+    }
+    @media (max-width: 1600px) {
+        height: 650px;
+    }
+    @media (max-width: 1500px) {
+        height: 570px;
+    }
+    @media (max-width: 1400px) {
+        height: 540px;
+    }
+    @media (max-width: 1300px) {
+        height: 510px;
+    }
+    @media (max-width: 1200px) {
+        height: 430px;
+    }
+    @media (max-width: 1100px) {
+        height: 400px;
+    }
+    @media (max-width: 1000px) {
+        height: 370px;
+    }
+    @media (max-width: 900px) {
+        height: 340px;
+    }
+    @media (max-width: 800px) {
+        height: 310px;
+    }
+    @media (max-width: 700px) {
+        height: 280px;
+    }
+    @media (max-width: 600px) {
+        height: 250px;
+    }
+    @media (max-width: 500px) {
+        height: 220px;
+    }
+    @media (max-width: 400px) {
+        height: 200px;
+    }
 
     &:hover {
         transform: scale(1.03);
