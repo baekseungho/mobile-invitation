@@ -5,8 +5,8 @@ import Flower from "../assets/flower1.png";
 
 const Wrapper = styled.div`
     padding-top: 42px;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -25,6 +25,10 @@ const Content = styled.span`
     background-image: url(${QuotePaper});
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: 400px) {
+        font-size: 1.05rem;
+    }
 `;
 
 const Image = styled.img`
